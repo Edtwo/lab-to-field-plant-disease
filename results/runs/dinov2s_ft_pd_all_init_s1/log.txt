@@ -1,0 +1,8 @@
+config {"model": "dinov2s_ft", "data": "pd_all", "seed": 1, "init": "results/runs/dinov2s_ft_pv_pre_s1/model.pt", "epochs": 15, "bs": 128, "name": null, "smoke": false, "lr": 5e-05, "wd": 0.05, "train_split": "pd_train", "n_train": 2334, "steps": 270, "timm_model": "vit_small_patch14_dinov2.lvd142m", "kind": "ft", "torch": "2.11.0+cu128", "gpu": "NVIDIA GeForce RTX 5080"}
+step 50/270 loss 1.2923 lr 4.89e-05 t 13s
+step 100/270 loss 0.9510 lr 3.97e-05 t 20s
+step 150/270 loss 0.7971 lr 2.45e-05 t 27s
+step 200/270 loss 0.7439 lr 9.56e-06 t 34s
+step 250/270 loss 0.7105 lr 8.31e-07 t 41s
+step 270/270 loss 0.7288 lr 0.00e+00 t 44s
+metrics {"train_seconds": 43.82065010070801, "pv_test": {"top1": 93.90534108937071, "macro_f1": 90.87450663654325, "ece": 13.94017739137728, "n": 7564}, "pd_test": {"top1": 71.61016949152543, "macro_f1": 69.95807572961668, "ece": 8.409768923864528, "n": 236}, "pd_test_dedup": {"top1": 73.68421052631578, "macro_f1": 71.01879879403398, "ece": 7.117187320900877, "n": 209}, "total_seconds": 57.831053495407104}

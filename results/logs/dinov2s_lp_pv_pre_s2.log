@@ -1,0 +1,53 @@
+config {"model": "dinov2s_lp", "data": "pv", "seed": 2, "init": null, "epochs": 5, "bs": 128, "name": null, "smoke": false, "lr": 0.001, "wd": 0.05, "train_split": "pv_train", "n_train": 30978, "steps": 1210, "timm_model": "vit_small_patch14_dinov2.lvd142m", "kind": "lp", "torch": "2.11.0+cu128", "gpu": "NVIDIA GeForce RTX 5080"}
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+step 50/1210 loss 1.8962 lr 5.10e-04 t 28s
+step 100/1210 loss 1.1092 lr 1.00e-03 t 31s
+step 150/1210 loss 0.8711 lr 9.95e-04 t 34s
+step 200/1210 loss 0.9132 lr 9.80e-04 t 37s
+step 250/1210 loss 0.8277 lr 9.56e-04 t 41s
+step 300/1210 loss 0.8341 lr 9.22e-04 t 45s
+step 350/1210 loss 0.8041 lr 8.80e-04 t 48s
+step 400/1210 loss 0.8537 lr 8.30e-04 t 51s
+step 450/1210 loss 0.8168 lr 7.74e-04 t 55s
+step 500/1210 loss 0.8164 lr 7.12e-04 t 58s
+step 550/1210 loss 0.7912 lr 6.46e-04 t 62s
+step 600/1210 loss 0.8072 lr 5.78e-04 t 65s
+step 650/1210 loss 0.7869 lr 5.07e-04 t 68s
+step 700/1210 loss 0.8156 lr 4.36e-04 t 71s
+step 750/1210 loss 0.7754 lr 3.67e-04 t 75s
+step 800/1210 loss 0.7625 lr 3.01e-04 t 79s
+step 850/1210 loss 0.8006 lr 2.38e-04 t 82s
+step 900/1210 loss 0.7948 lr 1.80e-04 t 85s
+step 950/1210 loss 0.8119 lr 1.29e-04 t 88s
+step 1000/1210 loss 0.8800 lr 8.57e-05 t 92s
+step 1050/1210 loss 0.8114 lr 5.04e-05 t 95s
+step 1100/1210 loss 0.8037 lr 2.40e-05 t 99s
+step 1150/1210 loss 0.7868 lr 7.19e-06 t 102s
+step 1200/1210 loss 0.7843 lr 2.00e-07 t 105s
+step 1210/1210 loss 0.7926 lr 0.00e+00 t 106s
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+<repo>\src\common.py:62: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  img = torch.from_numpy(np.ascontiguousarray(self.x[j])).permute(2, 0, 1)
+metrics {"train_seconds": 106.01933789253235, "pv_test": {"top1": 97.54098360655738, "macro_f1": 97.24988608853712, "ece": 16.647618528827827, "n": 7564}, "pd_test": {"top1": 47.88135593220339, "macro_f1": 46.316096058199065, "ece": 11.989843144507734, "n": 236}, "pd_test_dedup": {"top1": 47.368421052631575, "macro_f1": 45.571779311702436, "ece": 11.451290376733933, "n": 209}, "total_seconds": 120.2146646976471}

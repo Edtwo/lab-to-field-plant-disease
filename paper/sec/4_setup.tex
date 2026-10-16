@@ -1,0 +1,24 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\paragraph{Training.}
+Images are resized (shorter side 224) and center-cropped to $224\times224$ once and cached. Training augmentation is RandomResizedCrop (scale 0.5--1), horizontal flip, and color jitter (0.3/0.3/0.3/0.05).
+All models use AdamW (weight decay 0.05), label smoothing 0.1, batch size 128, bf16 autocast, linear warm-up (up to 100 steps) and cosine decay.
+Learning rate is $10^{-3}$ for the CNNs and the linear probe, and $5\times10^{-5}$ for DINOv2 fine-tuning.
+Epochs: 5 on \PV, 30 on \PD 5/class, 15 on all of \PD.
+We did no hyperparameter search. All values were fixed before any \PD result was seen, and \PD test data is never used for model selection.
+
+\paragraph{Seeds and statistics.}
+Every trained configuration runs with seeds $\{0,1,2\}$. The seed controls data order, augmentation, new-head initialization and the 5/class subset. We report mean $\pm$ sample std across seeds. Because the \PD test set is small, we also report the average half-width of a 95\% bootstrap confidence interval over test images (2{,}000 resamples).
+
+\paragraph{Pre-registered claims.}
+Before any results came in, we wrote five falsifiable claims with numeric thresholds (\texttt{notes/plan.md}). \texttt{scripts/summarize.py} checks them automatically:
+\textbf{C1}: every \PV-only model loses $\ge$30 points from \PV-test to \PD-test.
+\textbf{C2}: a frozen DINOv2 linear probe beats the best fine-tuned CNN on \PD by more than one combined std.
+\textbf{C3}: 5 field images per class recover $\ge$50\% of the gap between PV-only and PV$\rightarrow$all, for most models.
+\textbf{C4}: some configuration is within 5 points of the best \PD accuracy at $<$15\,ms CPU latency (4 threads).
+\textbf{C5}: seed std on \PD is $\ge$2 points for at least one model.
+
+\paragraph{Hardware and budget.}
+One RTX 5080 (16\,GB). All \NumRuns runs, including the post-hoc checks in \cref{sec:ablations}, took \GPUHours GPU-hours of wall-clock time including evaluation. The smoke test is excluded.
+Latency is measured on the same machine (\EdgeCPU).

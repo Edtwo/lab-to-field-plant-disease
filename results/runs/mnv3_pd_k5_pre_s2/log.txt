@@ -1,0 +1,3 @@
+config {"model": "mnv3", "data": "pd_k5", "seed": 2, "init": null, "epochs": 30, "bs": 128, "name": null, "smoke": false, "lr": 0.001, "wd": 0.05, "train_split": "pd_train", "n_train": 137, "steps": 30, "timm_model": "mobilenetv3_large_100.ra_in1k", "kind": "ft", "torch": "2.11.0+cu128", "gpu": "NVIDIA GeForce RTX 5080"}
+step 30/30 loss 0.7405 lr 0.00e+00 t 42s
+metrics {"train_seconds": 41.98223328590393, "pv_test": {"top1": 10.047593865679534, "macro_f1": 9.94582761994484, "ece": 26.560334115038465, "n": 7564}, "pd_test": {"top1": 25.847457627118644, "macro_f1": 25.013607791385567, "ece": 14.731008995134953, "n": 236}, "pd_test_dedup": {"top1": 23.923444976076556, "macro_f1": 22.896809336138695, "ece": 15.664828536613134, "n": 209}, "total_seconds": 97.58938932418823}

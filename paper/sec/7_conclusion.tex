@@ -1,0 +1,8 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We measured the PlantVillage$\rightarrow$PlantDoc shift with a seeded, released protocol on a single consumer GPU in \GPUHours\ GPU-hours.
+Lab accuracy says almost nothing about field accuracy: every model loses at least \dinovtwoslpGap\ points.
+Three results seem practically useful. A frozen, generic self-supervised backbone is the best starting point when no field labels exist. A handful of field labels helps but recovers well under half of the gap. And lab pretraining reliably helps small CNNs, but for a foundation backbone it pays off only when field labels are scarce.
+Two of our five pre-registered claims were falsified, and we report them as such.
+Finally, with a \PDtestN-image test set the field-domain evaluation itself is the bottleneck. We encourage future lab-to-field work to report paired intervals, publish label maps, de-duplicate test sets, and move toward larger in-the-wild test sets such as PlantWild~\cite{wei2024benchmarking}.

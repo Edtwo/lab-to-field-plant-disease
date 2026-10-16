@@ -1,0 +1,19 @@
+{
+ "model": "dinov2s_ft",
+ "data": "pd_k5",
+ "seed": 2,
+ "init": null,
+ "epochs": 30,
+ "bs": 128,
+ "name": null,
+ "smoke": false,
+ "lr": 5e-05,
+ "wd": 0.05,
+ "train_split": "pd_train",
+ "n_train": 137,
+ "steps": 30,
+ "timm_model": "vit_small_patch14_dinov2.lvd142m",
+ "kind": "ft",
+ "torch": "2.11.0+cu128",
+ "gpu": "NVIDIA GeForce RTX 5080"
+}

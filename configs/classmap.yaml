@@ -1,0 +1,32 @@
+# One-to-one map: PlantDoc class folder -> PlantVillage class folder.
+# Index order here defines the 28-way label space used everywhere.
+# Text fields (crop, condition) are used only for CLIP zero-shot prompts.
+classes:
+  - {plantdoc: "Apple Scab Leaf",                       plantvillage: "Apple___Apple_scab",                                  crop: "apple",        condition: "apple scab"}
+  - {plantdoc: "Apple leaf",                            plantvillage: "Apple___healthy",                                     crop: "apple",        condition: "healthy"}
+  - {plantdoc: "Apple rust leaf",                       plantvillage: "Apple___Cedar_apple_rust",                            crop: "apple",        condition: "cedar apple rust"}
+  - {plantdoc: "Bell_pepper leaf spot",                 plantvillage: "Pepper,_bell___Bacterial_spot",                       crop: "bell pepper",  condition: "bacterial spot"}
+  - {plantdoc: "Bell_pepper leaf",                      plantvillage: "Pepper,_bell___healthy",                              crop: "bell pepper",  condition: "healthy"}
+  - {plantdoc: "Blueberry leaf",                        plantvillage: "Blueberry___healthy",                                 crop: "blueberry",    condition: "healthy"}
+  - {plantdoc: "Cherry leaf",                           plantvillage: "Cherry_(including_sour)___healthy",                   crop: "cherry",       condition: "healthy"}
+  - {plantdoc: "Corn Gray leaf spot",                   plantvillage: "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",  crop: "corn",         condition: "gray leaf spot"}
+  - {plantdoc: "Corn leaf blight",                      plantvillage: "Corn_(maize)___Northern_Leaf_Blight",                 crop: "corn",         condition: "northern leaf blight"}
+  - {plantdoc: "Corn rust leaf",                        plantvillage: "Corn_(maize)___Common_rust_",                         crop: "corn",         condition: "common rust"}
+  - {plantdoc: "Peach leaf",                            plantvillage: "Peach___healthy",                                     crop: "peach",        condition: "healthy"}
+  - {plantdoc: "Potato leaf early blight",              plantvillage: "Potato___Early_blight",                               crop: "potato",       condition: "early blight"}
+  - {plantdoc: "Potato leaf late blight",               plantvillage: "Potato___Late_blight",                                crop: "potato",       condition: "late blight"}
+  - {plantdoc: "Raspberry leaf",                        plantvillage: "Raspberry___healthy",                                 crop: "raspberry",    condition: "healthy"}
+  - {plantdoc: "Soyabean leaf",                         plantvillage: "Soybean___healthy",                                   crop: "soybean",      condition: "healthy"}
+  - {plantdoc: "Squash Powdery mildew leaf",            plantvillage: "Squash___Powdery_mildew",                             crop: "squash",       condition: "powdery mildew"}
+  - {plantdoc: "Strawberry leaf",                       plantvillage: "Strawberry___healthy",                                crop: "strawberry",   condition: "healthy"}
+  - {plantdoc: "Tomato Early blight leaf",              plantvillage: "Tomato___Early_blight",                               crop: "tomato",       condition: "early blight"}
+  - {plantdoc: "Tomato Septoria leaf spot",             plantvillage: "Tomato___Septoria_leaf_spot",                         crop: "tomato",       condition: "septoria leaf spot"}
+  - {plantdoc: "Tomato leaf bacterial spot",            plantvillage: "Tomato___Bacterial_spot",                             crop: "tomato",       condition: "bacterial spot"}
+  - {plantdoc: "Tomato leaf late blight",               plantvillage: "Tomato___Late_blight",                                crop: "tomato",       condition: "late blight"}
+  - {plantdoc: "Tomato leaf mosaic virus",              plantvillage: "Tomato___Tomato_mosaic_virus",                        crop: "tomato",       condition: "mosaic virus"}
+  - {plantdoc: "Tomato leaf yellow virus",              plantvillage: "Tomato___Tomato_Yellow_Leaf_Curl_Virus",              crop: "tomato",       condition: "yellow leaf curl virus"}
+  - {plantdoc: "Tomato leaf",                           plantvillage: "Tomato___healthy",                                    crop: "tomato",       condition: "healthy"}
+  - {plantdoc: "Tomato mold leaf",                      plantvillage: "Tomato___Leaf_Mold",                                  crop: "tomato",       condition: "leaf mold"}
+  - {plantdoc: "Tomato two spotted spider mites leaf",  plantvillage: "Tomato___Spider_mites Two-spotted_spider_mite",       crop: "tomato",       condition: "two-spotted spider mites"}
+  - {plantdoc: "grape leaf black rot",                  plantvillage: "Grape___Black_rot",                                   crop: "grape",        condition: "black rot"}
+  - {plantdoc: "grape leaf",                            plantvillage: "Grape___healthy",                                     crop: "grape",        condition: "healthy"}

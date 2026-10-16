@@ -1,0 +1,22 @@
+\section{Introduction}
+\label{sec:intro}
+
+Image-based disease diagnosis is one of the most-cited use cases of computer vision in agriculture. It is also one of the clearest examples of a benchmark that has outrun deployment.
+Models trained on \PV~\cite{hughes2015an}, whose leaves are photographed one at a time on uniform backgrounds, reach about 99\% held-out accuracy~\cite{mohanty2016using}. On photos taken in real fields~\cite{singh2020plantdoc}, the same models do far worse.
+Recent work attacks this gap with larger and more specialized models~\cite{salman2025plant,mooraj2026agripath,mamun2025psmamba}. But the numbers being compared are hard to interpret. Label mappings between datasets are rarely published, results usually come from a single run, small field test sets are reported without intervals, and the compute or latency needed in the field is seldom measured.
+
+This paper takes a deliberately modest position. Before proposing new methods for lab-to-field transfer, we should be able to measure it reproducibly, with honest uncertainty, under a compute budget a typical agricultural lab or extension service can afford.
+We build such a measurement for the most widely used pair, \PV$\rightarrow$\PD, and use it to ask three practical questions:
+\begin{enumerate}
+\item How much does generic self-supervised pretraining help compared with small supervised CNNs when \emph{no} field labels exist?
+\item How much do a \emph{handful} of field labels (5 per class) buy, compared with all available field labels?
+\item Is lab data worth using at all once field labels exist, and does the answer depend on the model?
+\end{enumerate}
+
+\paragraph{Contributions.}
+\begin{itemize}
+\item A released, seeded protocol for \PV$\rightarrow$\PD: a one-to-one 28-class label map, leaf-grouped source splits, a near-duplicate audit (\PDdups of \PDtestN \PD test images duplicate training images), three seeds, bootstrap and paired-bootstrap intervals, and CPU/GPU cost. The full study takes \GPUHours GPU-hours on one consumer GPU (\cref{sec:method,sec:setup}).
+\item Five claims pre-registered with numeric thresholds before any results came in. Three hold and two are falsified, and we report both (\cref{sec:results}).
+\item Two findings practitioners can act on (\cref{sec:results}). First, a \emph{frozen} DINOv2 ViT-S probe trained only on lab images beats both fine-tuned edge CNNs and fine-tuned DINOv2 on field images. Second, lab pretraining helps CNNs at every label budget we tested. For DINOv2, its value disappears (fine-tuning) or turns negative (lab-trained head for the frozen probe) once all field labels are available.
+\item A quantified caution: on \PD, test-set sampling noise ($\pm$\CIhwMin--\CIhwMax\ points) is larger than seed noise, so many published single-number comparisons on this split cannot be distinguished (\cref{sec:limits}).
+\end{itemize}

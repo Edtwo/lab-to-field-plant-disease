@@ -1,0 +1,10 @@
+{
+ "model": "open_clip ViT-B-32 openai",
+ "templates": [
+  "a photo of a {}.",
+  "a close-up photo of a {}.",
+  "a field photo of a {}."
+ ],
+ "open_clip": "3.3.0",
+ "seed": 0
+}

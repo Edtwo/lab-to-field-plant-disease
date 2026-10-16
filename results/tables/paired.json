@@ -1,0 +1,68 @@
+[
+ {
+  "comparison": "DINOv2-LP vs EfficientNet-B0 (PV only)",
+  "diff": 14.265536723163844,
+  "lo": 8.192090395480225,
+  "hi": 20.19774011299435
+ },
+ {
+  "comparison": "DINOv2-LP vs DINOv2-FT (PV only)",
+  "diff": 8.47457627118644,
+  "lo": 3.107344632768362,
+  "hi": 13.559322033898304
+ },
+ {
+  "comparison": "DINOv2-LP (PV only) vs CLIP zero-shot",
+  "diff": 16.94915254237288,
+  "lo": 8.050847457627118,
+  "hi": 25.28248587570621
+ },
+ {
+  "comparison": "MobileNetV3-L: PV\u21925/class vs 5/class only",
+  "diff": 14.83050847457627,
+  "lo": 10.73446327683616,
+  "hi": 19.06779661016949
+ },
+ {
+  "comparison": "MobileNetV3-L: PV\u2192all vs all field only",
+  "diff": 9.463276836158194,
+  "lo": 5.649717514124294,
+  "hi": 13.280367231638365
+ },
+ {
+  "comparison": "EfficientNet-B0: PV\u21925/class vs 5/class only",
+  "diff": 13.983050847457626,
+  "lo": 10.1659604519774,
+  "hi": 17.93785310734463
+ },
+ {
+  "comparison": "EfficientNet-B0: PV\u2192all vs all field only",
+  "diff": 5.790960451977402,
+  "lo": 2.259887005649718,
+  "hi": 9.322033898305085
+ },
+ {
+  "comparison": "DINOv2 ViT-S/14 (linear probe): PV\u21925/class vs 5/class only",
+  "diff": 10.310734463276837,
+  "lo": 5.649717514124294,
+  "hi": 14.83050847457627
+ },
+ {
+  "comparison": "DINOv2 ViT-S/14 (linear probe): PV\u2192all vs all field only",
+  "diff": -5.225988700564972,
+  "lo": -8.757062146892654,
+  "hi": -1.9774011299435026
+ },
+ {
+  "comparison": "DINOv2 ViT-S/14 (fine-tune): PV\u21925/class vs 5/class only",
+  "diff": 12.570621468926552,
+  "lo": 8.333333333333334,
+  "hi": 16.94915254237288
+ },
+ {
+  "comparison": "DINOv2 ViT-S/14 (fine-tune): PV\u2192all vs all field only",
+  "diff": -0.14124293785310732,
+  "lo": -3.1073446327683616,
+  "hi": 2.9661016949152543
+ }
+]

@@ -1,0 +1,15 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Lab-to-field shift.}
+\PV~\cite{hughes2015an} made large-scale leaf-disease classification possible. Mohanty \etal~\cite{mohanty2016using} reported 99.35\% held-out accuracy on it. The arXiv version of the same study also reports only 31.4\% on images from other sources.
+\PD~\cite{singh2020plantdoc} collected 2.6k in-the-wild images of 13 crops for exactly this reason. Since then, lab-to-field transfer has been tackled with mixture-of-experts ViTs~\cite{salman2025plant}, cross-domain few-shot learning~\cite{yang2024laboratory}, CLIP-style zero-shot transfer~\cite{benabbas2025rethinking}, and comparisons of CNNs with contrastive and generative VLMs~\cite{mooraj2026agripath}.
+Xu \etal argue that strong benchmark numbers are partly an artifact of how the datasets were built~\cite{xu2023plant,xu2023embrace}.
+Published \PV$\rightarrow$\PD accuracies range widely: 48\% for ViT-B and 68\% for ViT+MoE in~\cite{salman2025plant}. Label mappings and preprocessing differ between papers, and to our knowledge none reports seed variance. We contribute a fixed, released protocol and measure that variance.
+
+\paragraph{Pretraining for agricultural vision.}
+Self-supervised pretraining on in-domain data is a recurring theme: contrastive plus masked-image pretraining on a large pest/disease corpus~\cite{wang2024selfsupervised}, Vision-Mamba SSL~\cite{mamun2025psmamba,mamun2025statespacessl}, SimCLR on a few thousand agricultural images~\cite{sonavane2026domainspecific}, and continual SSL adaptation for detection and segmentation~\cite{nahian2025agrifm}. Vision-language models have also been adapted to leaf disease~\cite{quoc2025a}.
+In contrast to training a new foundation model, we ask how far an \emph{off-the-shelf} generic self-supervised backbone (DINOv2~\cite{oquab2023dinov}) gets compared with edge CNNs~\cite{howard2019searching,tan2019efficientnet} and CLIP zero-shot~\cite{radford2021learning}.
+
+\paragraph{In-the-wild datasets.}
+Newer in-the-wild resources include PlantWild~\cite{wei2024benchmarking} (89 classes, multimodal), PlantSeg~\cite{wei2024plantseg} (segmentation) and retrieval-based diagnosis~\cite{wei2024snap}. We use \PD because its label space aligns one-to-one with \PV (\cref{sec:method}), which makes a controlled source$\rightarrow$target study possible. Extending the protocol to these larger datasets is natural future work.

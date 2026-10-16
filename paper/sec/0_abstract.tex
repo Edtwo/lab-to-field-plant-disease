@@ -1,0 +1,11 @@
+\begin{abstract}
+Plant-disease classifiers routinely exceed 99\% accuracy on the PlantVillage lab dataset, yet published numbers on field images vary widely and are rarely reproducible.
+We release a small, fully seeded benchmark of the PlantVillage$\rightarrow$PlantDoc shift. It has a fixed one-to-one 28-class label map, leaf-grouped source splits, a near-duplicate audit of the target test set, three seeds per configuration, bootstrap confidence intervals, and CPU/GPU cost measurements.
+We compare two edge CNNs (MobileNetV3, EfficientNet-B0), a DINOv2 ViT-S as a frozen linear probe or fine-tuned, and CLIP zero-shot, under five label regimes ranging from no field labels to the full PlantDoc training set.
+Every lab-trained model loses \dinovtwoslpGap--\mnvthreeGap\ points on field images.
+A frozen DINOv2 probe trained only on lab images is the strongest source-only model (\PCa\ points over EfficientNet-B0, paired 95\% CI [\PCalo, \PCahi]), and it beats fine-tuning the same backbone.
+Five field images per class recover only \effbzeroRec--\dinovtwoslpRec\% of the gap to full field supervision, which falsifies one of our pre-registered claims.
+Lab pretraining helps the CNNs at every label budget we tested. For DINOv2 it helps only when field labels are scarce: once all field labels are available it is neutral for fine-tuning, and a lab-trained head initialization \emph{hurts} the frozen probe.
+The \PDtestN-image PlantDoc test set also limits what can be concluded: 95\% bootstrap intervals span $\pm$\CIhwMin--\CIhwMax\ points, about three times the seed-to-seed standard deviation, and \PDdups test images are near-duplicates of training images.
+The whole study used \GPUHours\ GPU-hours. Code, configs, logs and per-run predictions are released at \url{https://github.com/Edtwo/lab-to-field-plant-disease}.
+\end{abstract}

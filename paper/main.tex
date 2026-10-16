@@ -1,0 +1,51 @@
+% WACV 2027 Paper Template (official author kit, wacv.thecvf.com/static/wacv-2027-author-kit-template.zip)
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%%%%%%%%% PAPER TYPE
+% HARVEST-Vision 2027 uses SINGLE-BLIND review (author names must appear), so we use the
+% camera-ready format with page numbers instead of the anonymous [review] option.
+\usepackage[pagenumbers]{wacv}
+
+\input{preamble}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xspace}
+\xspaceaddexceptions{]\%}
+\usepackage{caption}
+\definecolor{wacvblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=wacvblue]{hyperref}
+
+\def\wacvPaperID{*****}
+\def\confName{WACV}
+\def\confYear{2027}
+
+\input{../results/tables/numbers.tex}
+\newcommand{\PV}{PlantVillage\xspace}
+\newcommand{\PD}{PlantDoc\xspace}
+
+\title{Lab-to-Field on a Budget: A Seeded, Edge-Aware Benchmark of\\Plant Disease Classifiers under the PlantVillage$\rightarrow$PlantDoc Shift}
+
+%%%%%%%%% AUTHORS -- TO BE FILLED IN BY THE AUTHORS (single-blind venue)
+\author{Johnathan Luu \qquad Aryan Padarthi\\
+Allen High School\\
+{\tt\small \{johnathan.luu, aryan.padarthi\}@student.allenisd.org}
+}
+
+\begin{document}
+\maketitle
+\input{sec/0_abstract}
+\input{sec/1_intro}
+\input{sec/2_related}
+\input{sec/3_method}
+\input{sec/4_setup}
+\input{sec/5_results}
+\input{sec/5b_ablations}
+\input{sec/6_limitations}
+\input{sec/7_conclusion}
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{../refs/verified}
+}
+\end{document}

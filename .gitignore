@@ -1,0 +1,16 @@
+data/raw/
+data/cache/
+*.pt
+*.onnx
+__pycache__/
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.fdb_latexmk
+paper/*.fls
+results/smoke/
+paper/*.brf
+paper/*.synctex.gz
+paper/build.log

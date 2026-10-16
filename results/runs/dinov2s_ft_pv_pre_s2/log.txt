@@ -1,0 +1,27 @@
+config {"model": "dinov2s_ft", "data": "pv", "seed": 2, "init": null, "epochs": 5, "bs": 128, "name": null, "smoke": false, "lr": 5e-05, "wd": 0.05, "train_split": "pv_train", "n_train": 30978, "steps": 1210, "timm_model": "vit_small_patch14_dinov2.lvd142m", "kind": "ft", "torch": "2.11.0+cu128", "gpu": "NVIDIA GeForce RTX 5080"}
+step 50/1210 loss 0.9190 lr 2.55e-05 t 31s
+step 100/1210 loss 0.8109 lr 5.00e-05 t 37s
+step 150/1210 loss 0.7117 lr 4.98e-05 t 43s
+step 200/1210 loss 0.7561 lr 4.90e-05 t 49s
+step 250/1210 loss 0.6750 lr 4.78e-05 t 55s
+step 300/1210 loss 0.6588 lr 4.61e-05 t 61s
+step 350/1210 loss 0.6538 lr 4.40e-05 t 67s
+step 400/1210 loss 0.7086 lr 4.15e-05 t 73s
+step 450/1210 loss 0.6714 lr 3.87e-05 t 79s
+step 500/1210 loss 0.6546 lr 3.56e-05 t 85s
+step 550/1210 loss 0.6494 lr 3.23e-05 t 91s
+step 600/1210 loss 0.6835 lr 2.89e-05 t 97s
+step 650/1210 loss 0.6439 lr 2.54e-05 t 103s
+step 700/1210 loss 0.6434 lr 2.18e-05 t 109s
+step 750/1210 loss 0.6563 lr 1.84e-05 t 115s
+step 800/1210 loss 0.6411 lr 1.50e-05 t 121s
+step 850/1210 loss 0.6706 lr 1.19e-05 t 127s
+step 900/1210 loss 0.6738 lr 9.02e-06 t 133s
+step 950/1210 loss 0.6548 lr 6.47e-06 t 139s
+step 1000/1210 loss 0.6402 lr 4.29e-06 t 145s
+step 1050/1210 loss 0.6411 lr 2.52e-06 t 151s
+step 1100/1210 loss 0.6388 lr 1.20e-06 t 157s
+step 1150/1210 loss 0.6492 lr 3.60e-07 t 163s
+step 1200/1210 loss 0.6415 lr 1.00e-08 t 169s
+step 1210/1210 loss 0.6456 lr 0.00e+00 t 170s
+metrics {"train_seconds": 170.16213822364807, "pv_test": {"top1": 99.5637228979376, "macro_f1": 99.37727460454333, "ece": 9.78962423477868, "n": 7564}, "pd_test": {"top1": 36.440677966101696, "macro_f1": 34.8111298637491, "ece": 16.491653555530615, "n": 236}, "pd_test_dedup": {"top1": 37.32057416267943, "macro_f1": 35.679423794670136, "ece": 15.922338675939299, "n": 209}, "total_seconds": 184.360586643219}

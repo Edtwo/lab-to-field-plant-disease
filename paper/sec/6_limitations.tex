@@ -1,0 +1,17 @@
+\section{Limitations and Broader Impact}
+\label{sec:limits}
+
+\paragraph{Statistical power.}
+The \PD test set has only \PDtestN images (4--12 per class). \emph{Tomato two-spotted spider mites} has no test images and only 2 training images, so in the 5/class regime it contributes 2 images. Bootstrap intervals are therefore several points wide (\cref{tab:source}). Differences smaller than that should not be read as rankings. That is the reason we pre-registered thresholds and report intervals rather than bolding the best number.
+
+\paragraph{One target domain, one image type.}
+\PD is a single web-scraped field dataset of mostly single-leaf or few-leaf photos. Its photographers, devices, regions and seasons are unknown, so ``field'' here means \emph{uncontrolled imagery}, not a specific farm, crop season or sensor. Results may not transfer to drone, multispectral, or canopy-level imagery, or to growing regions under-represented in both datasets. The label space covers 13 crops (apple, bell pepper, blueberry, cherry, corn, grape, peach, potato, raspberry, soybean, squash, strawberry, tomato). Many staple crops, such as cassava, rice and wheat, are absent.
+
+\paragraph{Label noise and leakage.}
+\PD labels come from web image search and have not been re-verified by pathologists. Our near-duplicate check uses only perceptual hashing, so it may miss crops or edits of the same photo. Several \PD classes are \emph{healthy} leaves of different crops, so part of the task is crop identification rather than disease diagnosis.
+
+\paragraph{Compute and tuning.}
+To stay within a 5\,GPU-hour budget, all hyperparameters were fixed in advance and never tuned. Every model might improve with tuning, especially DINOv2 fine-tuning, which is sensitive to learning rate. Our latency numbers come from a desktop CPU, not a phone or microcontroller; they bound relative cost but do not give absolute on-device timings.
+
+\paragraph{Broader impact.}
+A classifier that scores 99\% in the lab and far lower in the field can do real harm if it is deployed on the strength of the lab number: missed infections, or unneeded pesticide applications. Our main recommendation is procedural. Report field-domain accuracy with intervals, publish label maps, and de-duplicate test sets before claiming deployability. Any tool built on these models should present predictions as decision support for growers and extension agents, with explicit uncertainty, not as a diagnosis. Both datasets are public and contain no personal data. PlantVillage is CC BY-SA 3.0 and PlantDoc is CC BY 4.0; we redistribute no images.

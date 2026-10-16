@@ -1,0 +1,22 @@
+\section{Ablations and Robustness Checks}
+\label{sec:ablations}
+
+\paragraph{Is ``frozen beats fine-tuned'' a learning-rate artifact?}
+All hyperparameters were fixed in advance, so a reviewer could reasonably suspect that the DINOv2 fine-tuning learning rate ($5\times10^{-5}$) was simply poorly chosen.
+After the main results were in, we re-ran PV-only fine-tuning at $10^{-5}$ and $2\times10^{-4}$ (3 seeds each). This was a robustness check only and was not used to select any model (\cref{tab:sens}).
+In-domain accuracy is essentially flat (99.4--99.5\%) across the 20$\times$ range. Field accuracy falls steadily as the learning rate rises, and every fine-tuned setting stays below the frozen probe.
+This supports the reading that fine-tuning on lab images trades away transferable features, rather than reflecting one bad hyperparameter.
+
+\begin{table}[t]
+\centering\scriptsize
+\input{../results/tables/sensitivity.tex}
+\caption{\textbf{DINOv2 ViT-S, trained on \PV only:} fine-tuning learning rate vs.\ in-domain (PV) and field (PD) top-1. Mean $\pm$ std over 3 seeds. The check was run after the main results and was not used for selection.}
+\label{tab:sens}
+\end{table}
+
+\paragraph{Test-set de-duplication.}
+Removing the \PDdups \PD test images that near-duplicate \PD training images changes source-only accuracies by under one point (\cref{tab:source}). It changes the regimes trained on \PD by up to about 2 points, most for fine-tuned DINOv2 with all field labels (72.7$\rightarrow$75.0; full table in \texttt{results/summary.md}).
+Accuracy mostly goes \emph{up} after removal, so on this split the duplicates did not inflate results. None of our conclusions change on the de-duplicated set. We still recommend reporting it, because the effect could differ for other models or splits.
+
+\paragraph{Lab pretraining as initialization.}
+The PV$\rightarrow$ vs.\ ``only'' columns of \cref{tab:labels} are themselves an ablation of the \PV stage. The paired results in \cref{tab:paired} show that the \PV stage is worth +10 to +15 points with 5 field images per class for every model. With all field labels it is worth less for the CNNs, nothing for fine-tuned DINOv2, and is harmful for the frozen probe. For the probe, the \PV stage only sets the head's initialization, because the backbone is frozen in both arms.

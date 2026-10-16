@@ -1,0 +1,19 @@
+{
+ "model": "effb0",
+ "data": "pd_k5",
+ "seed": 1,
+ "init": null,
+ "epochs": 30,
+ "bs": 128,
+ "name": null,
+ "smoke": false,
+ "lr": 0.001,
+ "wd": 0.05,
+ "train_split": "pd_train",
+ "n_train": 137,
+ "steps": 30,
+ "timm_model": "efficientnet_b0.ra_in1k",
+ "kind": "ft",
+ "torch": "2.11.0+cu128",
+ "gpu": "NVIDIA GeForce RTX 5080"
+}

@@ -1,0 +1,50 @@
+{
+ "prompts": [
+  "a photo of a apple leaf with apple scab.",
+  "a photo of a healthy apple leaf.",
+  "a photo of a apple leaf with cedar apple rust.",
+  "a photo of a bell pepper leaf with bacterial spot.",
+  "a photo of a healthy bell pepper leaf.",
+  "a photo of a healthy blueberry leaf.",
+  "a photo of a healthy cherry leaf.",
+  "a photo of a corn leaf with gray leaf spot.",
+  "a photo of a corn leaf with northern leaf blight.",
+  "a photo of a corn leaf with common rust.",
+  "a photo of a healthy peach leaf.",
+  "a photo of a potato leaf with early blight.",
+  "a photo of a potato leaf with late blight.",
+  "a photo of a healthy raspberry leaf.",
+  "a photo of a healthy soybean leaf.",
+  "a photo of a squash leaf with powdery mildew.",
+  "a photo of a healthy strawberry leaf.",
+  "a photo of a tomato leaf with early blight.",
+  "a photo of a tomato leaf with septoria leaf spot.",
+  "a photo of a tomato leaf with bacterial spot.",
+  "a photo of a tomato leaf with late blight.",
+  "a photo of a tomato leaf with mosaic virus.",
+  "a photo of a tomato leaf with yellow leaf curl virus.",
+  "a photo of a healthy tomato leaf.",
+  "a photo of a tomato leaf with leaf mold.",
+  "a photo of a tomato leaf with two-spotted spider mites.",
+  "a photo of a grape leaf with black rot.",
+  "a photo of a healthy grape leaf."
+ ],
+ "pv_test": {
+  "top1": 25.19830777366473,
+  "macro_f1": 14.566466461809856,
+  "ece": 3.473278403869229,
+  "n": 7564
+ },
+ "pd_test": {
+  "top1": 29.23728813559322,
+  "macro_f1": 24.61924959565613,
+  "ece": 8.902740819474397,
+  "n": 236
+ },
+ "pd_test_dedup": {
+  "top1": 28.708133971291865,
+  "macro_f1": 21.810349509561306,
+  "ece": 8.945103317641756,
+  "n": 209
+ }
+}

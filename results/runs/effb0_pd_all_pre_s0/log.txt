@@ -1,0 +1,8 @@
+config {"model": "effb0", "data": "pd_all", "seed": 0, "init": null, "epochs": 15, "bs": 128, "name": null, "smoke": false, "lr": 0.001, "wd": 0.05, "train_split": "pd_train", "n_train": 2334, "steps": 270, "timm_model": "efficientnet_b0.ra_in1k", "kind": "ft", "torch": "2.11.0+cu128", "gpu": "NVIDIA GeForce RTX 5080"}
+step 50/270 loss 1.1997 lr 9.78e-04 t 40s
+step 100/270 loss 0.8021 lr 7.93e-04 t 45s
+step 150/270 loss 0.7703 lr 4.90e-04 t 50s
+step 200/270 loss 0.7388 lr 1.91e-04 t 55s
+step 250/270 loss 0.7559 lr 1.66e-05 t 59s
+step 270/270 loss 0.7111 lr 0.00e+00 t 61s
+metrics {"train_seconds": 60.794976234436035, "pv_test": {"top1": 32.654680063458486, "macro_f1": 28.990219385543625, "ece": 4.139326738379797, "n": 7564}, "pd_test": {"top1": 58.05084745762712, "macro_f1": 55.28199176165837, "ece": 10.175456311869418, "n": 236}, "pd_test_dedup": {"top1": 59.33014354066985, "macro_f1": 56.752133769378496, "ece": 9.611713141202927, "n": 209}, "total_seconds": 116.01195740699768}

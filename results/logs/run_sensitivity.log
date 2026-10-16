@@ -1,0 +1,8 @@
+6 jobs
+[1/6] dinov2s_ft_pv_pre_lr1e-5_s0 attempt 1 rc=0 190s
+[2/6] dinov2s_ft_pv_pre_lr2e-4_s0 attempt 1 rc=0 191s
+[3/6] dinov2s_ft_pv_pre_lr1e-5_s1 attempt 1 rc=0 207s
+[4/6] dinov2s_ft_pv_pre_lr2e-4_s1 attempt 1 rc=0 202s
+[5/6] dinov2s_ft_pv_pre_lr1e-5_s2 attempt 1 rc=0 191s
+[6/6] dinov2s_ft_pv_pre_lr2e-4_s2 attempt 1 rc=0 196s
+ALL DONE

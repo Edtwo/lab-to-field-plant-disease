@@ -1,0 +1,9 @@
+<repo>\src\profile_edge.py:44: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(m, x, path, input_names=["x"], output_names=["y"], opset_version=17, dynamo=False)
+mnv3 {"params_M": 4.2379, "gpu_ms": 3.5308999940752983, "gpu_peak_mem_MB": 39.69384765625, "onnx_MB": 16.10370922088623, "cpu_ms_1thr": 2.670099987881258, "cpu_ms_4thr": 0.9426999895367771}
+effb0 {"params_M": 4.043416, "gpu_ms": 4.208600003039464, "gpu_peak_mem_MB": 39.6953125, "onnx_MB": 15.305962562561035, "cpu_ms_1thr": 5.2978500025346875, "cpu_ms_4thr": 1.904699980514124}
+<home>\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\__init__.py:2253: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not condition:
+<venv>\Lib\site-packages\timm\models\vision_transformer.py:1251: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if attn_mask is not None or is_causal:
+dinov2s_ft {"params_M": 21.63958, "gpu_ms": 2.7575500134844333, "gpu_peak_mem_MB": 139.30029296875, "onnx_MB": 82.39845752716064, "cpu_ms_1thr": 51.77950000506826, "cpu_ms_4thr": 18.087749980622903}

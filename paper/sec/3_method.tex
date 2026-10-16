@@ -1,0 +1,24 @@
+\section{Benchmark Protocol}
+\label{sec:method}
+
+\paragraph{Label space.}
+\PD's 28 classification folders each map one-to-one onto a \PV class. For example, \emph{Corn Gray leaf spot} maps to \emph{Corn\_(maize)\_\_\_Cercospora\_leaf\_spot Gray\_leaf\_spot}, and \emph{Tomato leaf} maps to \emph{Tomato\_\_\_healthy}. We drop the 10 \PV classes with no \PD counterpart and evaluate every model in the same 28-way space. The map is released as \texttt{configs/classmap.yaml}.
+
+\paragraph{Splits and leakage hygiene.}
+For \PV we use the maintainers' leaf-grouped 80/20 split, which keeps images of the same physical leaf out of both train and test. That leaves \PVtrainN training and \PVtestN test images. For \PD we use the official split (\PDtrainN train / \PDtestN test; the test split contains 27 of the 28 classes).
+A 64-bit average-hash comparison (Hamming distance $\le 4$) flags \PDdups of the \PDtestN \PD test images as near-duplicates of \PD training images. We therefore also report accuracy on the de-duplicated test set (PD$_\text{dedup}$). This matters most for the regimes that train on \PD.
+
+\paragraph{Models.}
+We pick models that could plausibly run on a field device, and one generic foundation backbone:
+MobileNetV3-Large~\cite{howard2019searching} and EfficientNet-B0~\cite{tan2019efficientnet} (ImageNet-1k weights from timm~\cite{wightman2019timm}), fully fine-tuned;
+DINOv2 ViT-S/14~\cite{oquab2023dinov} (LVD-142M self-supervised weights), used either as a frozen backbone with a linear head (LP) or fully fine-tuned (FT);
+and CLIP ViT-B/32~\cite{radford2021learning} (OpenAI weights) zero-shot with three prompt templates averaged per class (\eg ``a field photo of a tomato leaf with late blight'').
+
+\paragraph{Label regimes.}
+\textbf{PV only}: train on \PV, no field labels.
+\textbf{PV$\rightarrow$5/class}: start from that model and fine-tune on 5 \PD training images per class (137 images, since one class has only 2; the subset is drawn per seed).
+\textbf{PV$\rightarrow$all}: fine-tune on all \PD training images.
+\textbf{Field only} (5/class or all): start from the generic pretrained weights and skip \PV. This is the reference that tells us whether \PV helps at all.
+
+\paragraph{Edge cost.}
+For each architecture we report parameters, ONNX size, median batch-1 latency at 224\,px with ONNX Runtime~\cite{onnxruntime} on the CPU (1 and 4 threads), and bf16 latency and peak memory on the GPU.
